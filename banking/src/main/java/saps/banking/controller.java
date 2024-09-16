@@ -12,4 +12,11 @@ public class controller {
 	public String index() {
 		return "Integration completed";
 	}
+	
+
+    @GetMapping("/home")
+    @PreAuthorize("hasRole('ROLE_USER')")
+    public String home() {
+        return "home";
+    }
 }
